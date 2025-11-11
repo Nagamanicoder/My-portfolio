@@ -1,0 +1,15 @@
+#root{
+    background-color: black;
+    background-size: cover;
+    color: rgb(122, 187, 237);
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    scroll-padding-top: 50px;
+}

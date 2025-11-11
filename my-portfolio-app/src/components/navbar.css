@@ -1,0 +1,17 @@
+.navbar-border{
+    border-bottom: 2px solid rgb(122, 187, 237);
+}
+
+.nav-text {
+  color: rgb(122, 187, 237) !important;
+}
+
+.nav-text-heading{
+    color: rgb(122, 187, 237) !important;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nav-bar{
+  padding-top: 50px;
+}

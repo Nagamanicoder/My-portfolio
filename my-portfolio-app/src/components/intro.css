@@ -1,0 +1,26 @@
+.intro-text{
+    margin-top: 20px;
+    padding: 35px;
+    margin: 25px;
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+.my-image{
+    width: 50%;
+    height: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 5px solid rgb(122, 187, 237);
+    border-width: 2px;
+}
+
+
+

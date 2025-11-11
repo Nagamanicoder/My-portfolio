@@ -1,0 +1,32 @@
+.skills-Container{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    
+}
+
+.skill-image{
+    height: 50px;
+    width: 50px;
+}
+
+.skill-card{
+    color: rgb(122, 187, 237);
+    font-size: 15px;
+    padding: 10px;
+    gap: 20px;
+    border: 2px solid rgb(122, 187, 237);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
+  border-color: #71b7ff;
+  cursor: pointer;
+}
+
