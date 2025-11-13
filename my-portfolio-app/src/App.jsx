@@ -2,7 +2,9 @@ import Intro from './components/Intro';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Certifications from './components/Certifications';
 import './App.css';
+
 
 
 function App() {
@@ -19,6 +21,10 @@ function App() {
 
         <section id="Projects">
             <Projects/>
+        </section>
+
+        <section id="Certifications">
+            <Certifications/>
         </section>
 
         <section id="Contact">

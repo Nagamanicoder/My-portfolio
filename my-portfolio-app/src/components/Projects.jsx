@@ -2,6 +2,7 @@ import './projects.css';
 import DeMRI from '../assets/DeMRI.png';
 import PlasticPhechan from '../assets/PlasticPhechan.png';
 import CropWaterFootprint from '../assets/CropWaterFootprint.png';
+import LearningPathGenerator from '../assets/LearningPathGenerator.png';
 
 function Projects() {
     return (
@@ -13,6 +14,7 @@ function Projects() {
                         <h2 className='projects-heading'>
                             DEMRI Evaluation
                         </h2>
+                        
                         <img src={DeMRI} alt="De-MRI project" className='project-image' />
                         <div className='project-description'>
                             <p>Technology Stack:</p>
@@ -24,13 +26,11 @@ function Projects() {
                             </ul>
 
                             <p>Description:</p>
-                            <ul>
-                                <li>Goal: To automatically check heart MRI scans for signs of sickness or damage.</li>
-                                <li>User Interface: Built with Gradio for easy use.</li>
-                                <li>Process: A user uploads a Delayed Enhancement MRI (DE-MRI) scan image.</li>
-                                <li>Output: The model instantly classifies the scan as "Sick" (abnormal) or "Normal" (healthy).</li>
-                                <li>Impact: Speeds up initial cardiac screening and helps doctors quickly evaluate heart health.</li>
-                            </ul>
+                            <p>
+                                AI tool that analyzes heart MRI scans (DE-MRI) via a Gradio interface. 
+                                Users upload a scan, and the model instantly classifies it as “Normal” or “Sick”, 
+                                enabling faster cardiac screening and aiding doctors in quick diagnosis.
+                            </p>
                         </div>
                         {/* <div>
                             <p>Github link</p>
@@ -50,13 +50,10 @@ function Projects() {
                             </ul>
 
                             <p>Description:</p>
-                            <ul>
-                                <li>Goal: To automatically check heart MRI scans for signs of sickness or damage.</li>
-                                <li>User Interface: Built with Gradio for easy use.</li>
-                                <li>Process: A user uploads a Delayed Enhancement MRI (DE-MRI) scan image.</li>
-                                <li>Output: The model instantly classifies the scan as "Sick" (abnormal) or "Normal" (healthy).</li>
-                                <li>Impact: Speeds up initial cardiac screening and helps doctors quickly evaluate heart health.</li>
-                            </ul>
+                            <p>
+                                AI-powered tool using Gradio to analyze DE-MRI heart scans, 
+                                instantly classifying them as Normal or Sick, enabling faster and more efficient cardiac screening.
+                            </p>
                         </div>
                         {/* <div>
                             <p>Github link</p>
@@ -75,14 +72,40 @@ function Projects() {
                             <li>Python</li>
                             </ul>
                             <p>Description:</p>
+                            <p>
+                                AI model that predicts a crop’s water footprint using historical data and 
+                                suggests water-efficient alternative crops, 
+                                helping farmers make smarter, water-saving decisions.
+                            </p>
+                        </div>
+                        {/* <div>
+                            <p>Github link</p>
+                        </div> */}
+                    </div>
+
+                     <div className="projects-card">
+                        <h2 className='projects-heading'>
+                            Learning Path Generator with Model Context Protocol
+                        </h2>
+                        <img src={LearningPathGenerator} alt="LearningPathGenerator project" className='project-image' />
+                        <div >
+                            <a href='https://nagamanicoder-genai-learning-path-generator-app-vrto30.streamlit.app/' className='project-demo'>DEMO</a>
+                            <a href='https://github.com/Nagamanicoder/GenAI-Learning-Path-generator.git' className='project-demo'>CODE</a>
+                        </div>
+                        
+                        <div className='project-description'>
+                            <p>Technology Stack:</p>
                             <ul>
-                                <li>Goal: To help farmers save water by predicting a crop's total water use and 
-                                suggesting better alternatives.</li>
-                                <li>Data Source: Trained on historical datasets (weather, soil, past water usage)—no real-time sensors used.</li>
-                                <li>Process: User inputs State, District, and Crop. The model predicts the water footprint.</li>
-                                <li>Output: If water usage is too high, the system recommends water-efficient alternative crops for that specific area.</li>
-                                <li>Impact: Promotes data-driven decision-making for better water conservation in agriculture.</li>
+                                <li>Python</li>
+                                <li>Streamlit</li>
+                                <li>APIs/Integrations: Google AI Studio API, Pipedream (YouTube, Drive, Notion)</li>
                             </ul>
+                            <p>Description:</p>
+                            <p>
+                                A Streamlit web app that generates personalized learning paths using the Model Context Protocol (MCP). 
+                                It connects with YouTube, Google Drive, 
+                                and Notion to provide an integrated learning experience with progress tracking and content organization.
+                            </p>
                         </div>
                         {/* <div>
                             <p>Github link</p>
