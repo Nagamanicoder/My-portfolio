@@ -3,6 +3,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Certifications from './components/Certifications';
+import Achivements from './components/Achivements';
 import './App.css';
 
 
@@ -26,6 +27,10 @@ function App() {
         <section id="Certifications">
             <Certifications/>
         </section>
+
+        <section id="Achivements">
+            <Achivements/>
+        </section> 
 
         <section id="Contact">
             <Contact/>

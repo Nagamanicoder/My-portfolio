@@ -20,6 +20,7 @@ function Navigationbar(){
               <Nav.Link href="#Skills" className='nav-text'>Skills</Nav.Link>
               <Nav.Link href="#Projects" className='nav-text'>Projects</Nav.Link>
               <Nav.Link href="#Certifications" className='nav-text'>Certifications</Nav.Link>
+              <Nav.Link href="#Achivements" className='nav-text'>Achivements</Nav.Link>
               <Nav.Link href="#Contact" className='nav-text'>Contact</Nav.Link>
               <Nav.Link href="public/resume.pdf" target="_blank" rel="noreferrer" className='nav-text'>Resume</Nav.Link>
               {/* <Nav.Link href="#Blogs" className='nav-text'>Blogs</Nav.Link> */}
