@@ -1,25 +1,100 @@
+/* Intro component - mobile-first responsive styles */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 16px;
+    padding: 8px;
+}
+
 .intro-text{
-    margin-top: 20px;
-    padding: 35px;
-    margin: 25px;
+    margin: 0;
+    padding: 8px 4px;
+    max-width: 720px;
+    text-align: center;
 }
 
 h1{
-    text-align: center;
-    padding: 10px;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 1.6rem;
+        margin: 0 0 8px 0;
+}
+
+h5{
+        line-height: 1.5;
+        margin: 0 0 8px 0;
+        font-weight: 500;
+}
+
+.intro-image{
+    width: 100%;
+    display: none; /* hide on small devices */
+    justify-content: center;
 }
 
 .my-image{
-    width: 50%;
-    height: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
     display: block;
-    margin: auto;
-    border: 5px solid rgb(122, 187, 237);
-    border-width: 2px;
+    margin: 0;
+    border: 2px solid rgb(122, 187, 237);
+    object-fit: cover;
+}
+
+/* Medium screens and up: two-column layout */
+@media (min-width: 768px) {
+    .intro{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        max-width: 1100px;
+        margin: 24px auto;
+        padding: 16px;
+    }
+
+    .intro-text{
+        flex: 1 1 60%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .intro-image{
+        display: flex; /* show image on md+ */
+        flex: 0 0 260px;
+        justify-content: flex-end;
+    }
+
+    h1{
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    .my-image{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Large screens: increase spacing and typography */
+@media (min-width: 1024px) {
+    .intro{
+        gap: 40px;
+        padding: 24px 16px;
+    }
+
+    h1{
+        font-size: 2.4rem;
+    }
+
+    .my-image{
+        width: 240px;
+        height: 240px;
+    }
 }
 
 

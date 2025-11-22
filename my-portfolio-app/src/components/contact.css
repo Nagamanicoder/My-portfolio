@@ -1,15 +1,57 @@
-.contact-container{
+/* Contact section - align with other sections (max-width:1100px) */
+.contact-section{
+    max-width: 1100px; /* match other sections */
+    margin: 24px auto;
+    padding: 12px 16px;
     border-top: 2px solid rgb(122, 187, 237);
-    padding: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    box-sizing: border-box;
+}
 
+.contact-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.contact-icons-row{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-icons{
-    width: 40px;
+    width: clamp(36px, 6vw, 48px);
+    height: auto;
     cursor: pointer;
-    margin: 10px;
-    justify-content: center;
     display: inline-block;
+    transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.contact-icons:hover{
+    transform: translateY(-4px);
+    opacity: 0.95;
+}
+
+.contact-footer{
+    color: #cbd5e1; /* soft light color */
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Medium screens: place icons left and footer right to align with other sections */
+@media (min-width: 768px){
+    .contact-inner{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 6px 0;
+    }
+
+    .contact-icons-row{
+        justify-content: flex-start;
+    }
 }

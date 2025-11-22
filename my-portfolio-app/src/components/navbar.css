@@ -1,17 +1,90 @@
+/* Navbar styles (plain CSS + Bootstrap utilities) */
+
 .navbar-border{
     border-bottom: 2px solid rgb(122, 187, 237);
+    /* keep navbar visible at top when navigating/scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 70;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
 }
 
+/* Reset anchor decoration and color for nav links */
 .nav-text {
   color: rgb(122, 187, 237) !important;
+  text-decoration: none !important;
 }
 
-.nav-text-heading{
-    color: rgb(122, 187, 237) !important;
-    font-weight: bold;
-    font-size: 25px;
+/* Nav links container: hidden on small, shown when toggled. On md+ always flex row */
+.nav-links{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 8px;
+  background: transparent;
+}
+.nav-links.show{
+  display: flex !important;
+  /* overlay menu on mobile to avoid layout shifts */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.85);
+  z-index: 80; /* show above navbar background */
 }
 
-.nav-bar{
-  padding-top: 50px;
+/* On medium and larger screens show the links inline and remove extra spacing */
+@media (min-width: 768px) {
+  .nav-links{
+    display: flex !important;
+    flex-direction: row;
+    gap: 1.25rem;
+    width: auto;
+    margin-top: 0;
+    position: static;
+    background: transparent;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
+  /* Hide default toggler if any (we use our own) */
+  .navbar-toggler{ display: none; }
 }
+
+/* Ensure toggler is visible on small screens */
+.navbar-toggler{ display: inline-block; }
+
+/* Toggler icon styling (simple three-line icon) */
+.navbar-toggler{
+  border: none;
+  background: transparent;
+}
+.navbar-toggler .navbar-toggler-icon{
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: rgb(122, 187, 237);
+  position: relative;
+}
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: rgb(122, 187, 237);
+}
+.navbar-toggler .navbar-toggler-icon::before{ top: -7px; }
+.navbar-toggler .navbar-toggler-icon::after{ top: 7px; }
+
+/* Remove unwanted white space from container-fluid default paddings if needed */
+.container-fluid{ padding-left: 12px; padding-right: 12px; }
+
+

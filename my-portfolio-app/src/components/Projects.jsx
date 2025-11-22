@@ -8,7 +8,7 @@ function Projects() {
     return (
         <div>
             <div className='project-container'>
-                <h1>My Projects</h1>
+                <h1>PROJECTS</h1>
                 <div className='projects-container'>
                     <div className="projects-card">
                         <h2 className='projects-heading'>

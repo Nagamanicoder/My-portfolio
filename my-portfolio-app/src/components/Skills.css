@@ -1,32 +1,85 @@
+/* Skills responsive layout */
+
+.skills-section .container{
+    max-width: 1100px; /* match intro max width */
+    margin: 0 auto;
+    padding-left: 16px; /* align with intro padding */
+    padding-right: 16px;
+}
+
 .skills-Container{
-    display: flex;
-    justify-content: center;
-    height: 50%;
-    width: 50%;
-    margin: auto;
-    
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1100px; /* match intro */
+        margin: 8px auto 24px auto;
+        padding: 0 12px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+        align-items: stretch; /* ensure equal heights */
 }
 
 .skill-image{
-    height: 50px;
-    width: 50px;
+        height: 48px;
+        width: 48px;
 }
 
 .skill-card{
-    color: rgb(122, 187, 237);
-    font-size: 15px;
-    padding: 10px;
-    gap: 20px;
+    color: #cfe9ff;
+    font-size: 14px;
+    padding: 12px;
     border: 2px solid rgb(122, 187, 237);
     border-radius: 10px;
     text-align: center;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 100%;
+    width: 100%;
 }
 
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
-  border-color: #71b7ff;
-  cursor: pointer;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.16);
+    border-color: #71b7ff;
+    cursor: pointer;
 }
+
+/* Medium devices: stack skills vertically (one per row) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .skills-Container{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .skill-image{ height: 56px; width:56px; }
+}
+
+/* Large devices: distribute items evenly (3 columns) */
+@media (min-width: 1024px) {
+    .skills-Container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .skill-image{ height: 64px; width:64px; }
+}
+
+/* Heading alignment and sizing specific to skills section */
+.skills-section .container h1{
+    display: block;
+    text-align: left;
+    margin: 0 0 16px 0;
+    font-size: 1.9rem; /* increased size */
+    font-weight: 700;
+    color: rgb(122, 187, 237);
+    padding-left: 0; /* align exactly with intro content */
+}
+
+/* Make sure each grid item stretches so cards are equal height */
+.skills-Container > .skill-card{ align-self: stretch; }
+
+/* Prevent any overflow from images/cards */
+.skills-Container img{ max-width: 100%; height: auto; display: block; }
+
 

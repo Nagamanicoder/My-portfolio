@@ -11,11 +11,9 @@ import git from '../assets/git.png';
 
 function Skills(){
     return (
-        <div>
+        <section className="skills-section">
             <div className='container'>
-                <h1>
-                    My Skill Set
-                </h1>
+                <h1>SKILLS</h1>
                 <div className="skills-Container">
                     <div className="skill-card">
                         <img src={HTMLlogo} alt="HTML5 Logo" className='skill-image' />
@@ -55,7 +53,7 @@ function Skills(){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

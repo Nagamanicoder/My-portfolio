@@ -1,7 +1,9 @@
+@import "tailwindcss";
+
 #root{
     background-color: black;
     background-size: cover;
-    color: rgb(122, 187, 237);
+    color: rgb(122, 187, 237) !important;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Ensure in-page anchor navigation accounts for the sticky navbar height */
 html{
-    scroll-padding-top: 50px;
+    scroll-padding-top: 72px;
 }
