@@ -4,14 +4,18 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Certifications from './components/Certifications';
 import Achivements from './components/Achivements';
+import ParticleBackground from './components/ParticleBackground';
 import './App.css';
+
 
 
 
 function App() {
   return (
     <>
+      <ParticleBackground/>
       <div className='components-container'>
+        
         <section id="home">
           <Intro/>
         </section>

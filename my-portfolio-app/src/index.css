@@ -4,6 +4,7 @@
     background-color: black;
     background-size: cover;
     color: rgb(122, 187, 237) !important;
+    z-index: 1;
 }
 
 body {
