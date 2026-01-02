@@ -1,25 +1,35 @@
-import Outskill from '../assets/Outskill.jpeg';
-import FullstackOllama from '../assets/FullstackOllama.jpeg';
-import '../components/certificates.css';
+import './certifications.css';
+import CERTIFICATIONS from '../Data/CertificationsData.jsx';
 
-function Certifications() {
-    return(
+const CertificateCard = ({ certificate }) => (
+    /* Changed class to "certificates" to match your CSS */
+    <div className="certificates">
+        <img 
+            src={certificate.image} 
+            alt={certificate.alt} 
+            className='certificate-img' 
+        />
+        <div className='certificate-description'>
+            <h2 className='certificates-heading'>{certificate.title}</h2> 
+            <p><strong>Issuer:</strong> {certificate.issuer}</p>
+        </div>
+    </div>
+);  
+
+const CertificationsSection = () => {
+    return (
+        /* Added 'certifications-section' class to match your CSS selectors */
         <section className="certifications-section">
-            <div className="container">
-                <h1>My Certificates</h1>
+            <div className='container'>     
+                <h1>CERTIFICATIONS</h1>
                 <div className='certificate-container'>
-                    <div className='certificates'>
-                        <img src={Outskill} className='certificate-img' alt="Outskill certificate"/>
-                        <p>Generative AI Mastermind at Outskill</p>
-                    </div>
-                    <div className='certificates'>
-                        <img src={FullstackOllama} className='certificate-img' alt="Ollama certificate"/>
-                        <p>Fullstack AI with Ollama</p>
-                    </div>
+                    {CERTIFICATIONS.map(certificate => (        
+                        <CertificateCard key={certificate.id} certificate={certificate} />
+                    ))}        
                 </div>
             </div>
         </section>
     );
-}
+};
 
-export default Certifications;
+export default CertificationsSection;

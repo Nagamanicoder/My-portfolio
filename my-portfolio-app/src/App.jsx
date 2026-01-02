@@ -13,7 +13,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <ParticleBackground/>
+      {/* <ParticleBackground/> */}
       <div className='components-container'>
         
         <section id="home">
